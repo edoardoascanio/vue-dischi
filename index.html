@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disk</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+    
+        
+        <!-- stampiamo a schermo una card per ogni album 
+        
+        - se array vuoto mostrare loading
+        - tramite v-if se array vuoto mostra loading
+
+        - usare v-for per stampare le cards albums
+        - scrivere html per ogni albums:
+         img copertina titolo album, anno e artista
+        
+        -->
+    <div id="app"> 
+
+        <h1>
+            My Albums
+
+            <!-- creare una lista con i generi 
+            in base alla scelta della select
+
+             - creare le option
+             - recuperare i genrei e salvarli in array
+             - usare v-for per stamparli
+             - filtrare i dischi per genere al cambio della select usare change 
+             - filter sui dati e salvarli in una nuova variabile
+            
+            -->
+
+            <select name="" id="" @change="onSelectChange"></select>
+        </h1>  
+
+        <div class="albums-container">
+            <div class="album">
+                <img src="" alt="">
+                <h3>Titolo</h3>
+                <h4>nome</h4>
+                <span>anno</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
