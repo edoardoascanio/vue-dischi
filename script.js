@@ -3,17 +3,22 @@ new Vue({
 
     data: {
         albumList:[],
-        filteredData:[]
+        filteredData:[],
+        genre:null
     },
 
 
     methods: {
         
-        onSelectChange(event) {
-            const select = event.currentTarget
-            select.value
+        onSelectChange() {
 
-            this.filteredData = select;
+            this.filteredData  = [];
+            for (let index = 0; index < this.albumList.length; index++) {
+                const element = this.albumList[index];
+                if (element.genre == this.genre) {
+                    this.filteredData.push(element);
+                }
+            }
 
         }
     },
@@ -23,7 +28,7 @@ new Vue({
             .then((resp) => {
      
                 this.albumList = resp.data.response;
-
+                this.filteredData = this.albumList;
             });
     }
 })

@@ -19,18 +19,18 @@
             My Albums
 
             <div class="select" @change="onSelectChange">
-                <select name="genre" id="genre">
-                    <option value="pop">Pop</option>
-                    <option value="genre">Rock</option>
-                    <option value="genre">Metal</option>
-                    <option value="genre">Jazz</option>
+                <select v-model="genre" name="genre" id="genre">
+                    <option value="Pop">Pop</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Metal">Metal</option>
+                    <option value="Jazz">Jazz</option>
                 </select>
             </div>
 
         </h1>
 
         <div class="albums-container">
-            <div v-for="album in albumList" class="album">
+            <div v-for="album in filteredData" class="album">
                 <img :src="album.poster" alt="">
                 <h3>{{album.title}}</h3>
                 <h3 id="author">{{album.author}}</h3>
